@@ -1,0 +1,38 @@
+{
+  "name": "@unveiled/backend",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Virtual-Royaume/Unveiled.git"
+  },
+  "keywords": [],
+  "contributors": [
+    "@Unarray"
+  ],
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Virtual-Royaume/Unveiled/issues"
+  },
+  "homepage": "https://github.com/Virtual-Royaume/Unveiled#readme",
+  "dependencies": {
+    "socket.io": "^4.6.1"
+  },
+  "devDependencies": {
+    "@swc-node/register": "^1.6.4",
+    "nodemon": "^2.0.22",
+    "@bluzzi/eslint-config": "^0.9.0",
+    "@types/node": "18.15.11",
+    "eslint": "8.37.0",
+    "typescript": "5.0.3"
+  },
+  "eslintConfig": {
+    "extends": [
+      "@bluzzi"
+    ]
+  }
+}
