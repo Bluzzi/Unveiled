@@ -23,7 +23,6 @@ export default function SignIn(): ReactElement {
         className="flex flex-col gap-3"
       >
         <Input
-          variant="secondary"
           type="email"
           placeholder="Enter your email"
           {...register("email")}
@@ -31,14 +30,13 @@ export default function SignIn(): ReactElement {
         {errors.email?.message && <p className="text-red">{errors.email.message}</p>}
 
         <Input
-          variant="secondary"
           type="password"
           placeholder="Enter your password"
           {...register("password")}
         />
         {errors.password?.message && <p className="text-red">{errors.password.message}</p>}
 
-        <UnveiledBtn size="large" className="animate-from-bottom">Login</UnveiledBtn>
+        <UnveiledBtn className="animate-from-bottom">Login</UnveiledBtn>
       </form>
     </div>
   );
