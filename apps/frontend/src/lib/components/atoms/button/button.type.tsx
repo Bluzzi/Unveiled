@@ -1,16 +1,13 @@
-import { AnchorHTMLAttributes, ButtonHTMLAttributes, ReactElement } from "react";
-
-export type ButtonSize = "small" | "base" | "large";
+import { AnchorHTMLAttributes, ButtonHTMLAttributes, PropsWithChildren, ReactElement } from "react";
 
 type BaseButtonProps = {
-  size?: ButtonSize;
+  size?: "small" | "base" | "full-width";
   icon?: ReactElement;
-  fullWidth?: boolean;
 }
 
-export type ButtonProps = BaseButtonProps & ButtonHTMLAttributes<HTMLButtonElement>;
+export type ButtonProps = BaseButtonProps & ButtonHTMLAttributes<HTMLButtonElement> & PropsWithChildren;
 
-export type LinkButtonProps = BaseButtonProps & Omit<AnchorHTMLAttributes<HTMLAnchorElement>, "target" | "href"> & {
+export type LinkButtonProps = BaseButtonProps & Omit<AnchorHTMLAttributes<HTMLAnchorElement>, "target" | "href"> & PropsWithChildren & {
   href: string;
   target?: "_blank" | "_self";
 }
