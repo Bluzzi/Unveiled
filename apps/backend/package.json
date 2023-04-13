@@ -4,6 +4,9 @@
   "description": "",
   "main": "index.js",
   "scripts": {
+    "dev": "npx nodemon --exec node -r @swc-node/register ./src/server.ts",
+    "build": "tsc --build",
+    "start": "node build/index.js",
     "test": "echo \"Error: no test specified\" && exit 1",
     "db:migrate-dev": "prisma migrate dev",
     "db:migrate-prod": "prisma migrate deploy",
