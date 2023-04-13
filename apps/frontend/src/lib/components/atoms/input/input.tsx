@@ -1,28 +1,50 @@
+"use client";
+
 import type { InputProps } from "./input.type";
-import type { ReactElement } from "react";
-import { forwardRef } from "react";
+import { type ReactElement, useState, forwardRef } from "react";
 import { clsx } from "clsx";
 
 export const Input = forwardRef<HTMLInputElement, InputProps>((
-  { variant, className, ...props }, ref
+  { icon, size = "base", className, onFocus, onBlur, ...props }, ref
 ): ReactElement => {
-  const styles = clsx(
-    "w-full pl-12 pr-3 py-2",
-    "outline-none border focus:border-indigo-600",
-    "shadow-sm rounded-lg",
+  const [isFocused, setIsFocused] = useState(false);
+
+  // Styles:
+  const containerStyles = clsx(
+    "text-white text-lg",
+    "bg-primary-3 rounded shadow-primary-3",
+    "flex items-center gap-3",
     {
-      "bg-primary text-white": variant === "primary",
-      "bg-transparent text-black": variant === "secondary"
+      // Focus:
+      "shadow-md": isFocused,
+      "shadow": !isFocused,
+
+      // Size:
+      "py-1 px-3": size === "small",
+      "py-2 px-4": size === "base"
     },
     className
   );
 
+  // Render:
   return (
-    <input
-      ref={ref}
-      className={styles}
-      {...props}
-    />
+    <div className={containerStyles}>
+      {icon}
+
+      <input
+        ref={ref}
+        className="bg-primary-3 outline-none w-full h-6 text-base"
+        onFocus={event => {
+          setIsFocused(true);
+          onFocus?.(event);
+        }}
+        onBlur={event => {
+          setIsFocused(false);
+          onBlur?.(event);
+        }}
+        {...props}
+      />
+    </div>
   );
 });
 
