@@ -14,9 +14,9 @@ export default {
       "black": "black",
 
       "primary": {
-        DEFAULT: "#202C59",
-        2: "#182F4EB2",
-        3: "#0795A9"
+        DEFAULT: "#134D6B",
+        2: "#15425A",
+        3: "#15425A"
       },
 
       "red": "#FF5555"
