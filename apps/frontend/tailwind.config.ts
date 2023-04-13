@@ -4,8 +4,7 @@ export default {
   content: ["./src/**/*.tsx"],
   theme: {
     fontFamily: {
-      "sans": ["var(--font-inter)"],
-      "mono": ["var-(--font-roboto-mono)"]
+      "sans": ["Inter", "sans-serif"]
     },
 
     colors: {
