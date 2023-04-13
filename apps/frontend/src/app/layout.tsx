@@ -6,9 +6,9 @@ import type { Metadata } from "next";
 import { Provider } from "./provider";
 
 export const metadata: Metadata = {
-  title: "NextJS Template",
+  title: "Unveiled",
   description: "A NextJS template by Leepos.",
-  icons: "/next-js.svg"
+  icons: "/logo.png"
 };
 
 export default function RootLayout({ children }: PropsWithChildren): ReactElement {
