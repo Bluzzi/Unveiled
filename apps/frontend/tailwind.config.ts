@@ -13,7 +13,11 @@ export default {
       "white": "white",
       "black": "black",
 
-      "primary": "#202C59",
+      "primary": {
+        DEFAULT: "#202C59",
+        2: "#182F4EB2",
+        3: "#0795A9"
+      },
 
       "red": "#FF5555"
     },
