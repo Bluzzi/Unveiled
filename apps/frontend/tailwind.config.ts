@@ -12,6 +12,7 @@ export default {
 
       "white": "white",
       "black": "black",
+      "gray": "#94B4C0",
 
       "primary": {
         DEFAULT: "#134D6B",
