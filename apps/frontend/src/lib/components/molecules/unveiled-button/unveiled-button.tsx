@@ -1,6 +1,6 @@
 "use client";
 
-import { Children, ReactElement } from "react";
+import type { ReactElement } from "react";
 import { Button, ButtonProps } from "#/lib/components/atoms/button";
 import { FiCopy } from "react-icons/fi";
 import { clsx } from "clsx";
