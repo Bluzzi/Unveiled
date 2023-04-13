@@ -19,12 +19,14 @@ jobs:
         with:
           version: 8.1.1
       - uses: actions/setup-node@v3
+      - name: Move to frontend workspace
+        run: cd ./apps/frontend
       - name: Create .env file from GitHub secrets
         run: echo "$ENV_VARIABLES" > .env
       - name: Install dependencies
         run: pnpm install
       - name: Build NextJS
-        run: pnpm front run build
+        run: pnpm run build
   storybook:
     name: Storybook
     runs-on: ubuntu-latest
@@ -34,7 +36,9 @@ jobs:
         with:
           version: 8.1.1
       - uses: actions/setup-node@v3
+      - name: Move to frontend workspace
+        run: cd ./apps/frontend
       - name: Install dependencies
         run: pnpm install
       - name: Build Storybook
-        run: pnpm front run sb:build
+        run: pnpm run sb:build
