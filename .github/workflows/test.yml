@@ -9,6 +9,10 @@ on:
 env: 
   ENV_VARIABLES: ${{ github.ref == 'refs/heads/env/prod' && secrets.PROD_VARIABLES || secrets.DEV_VARIABLES }}
 
+defaults:
+  run:
+    working-directory: ./apps/frontend
+
 jobs:
   unit-test:
     name: Unit tests
@@ -19,8 +23,6 @@ jobs:
         with:
           version: 8.1.1
       - uses: actions/setup-node@v3
-      - name: Move on frontend workspace
-        run: cd ./apps/frontend
       - name: Create .env file from GitHub secrets
         run: echo "$ENV_VARIABLES" > .env
       - name: Install dependencies
@@ -37,8 +39,6 @@ jobs:
         with:
           version: 8.1.1
       - uses: actions/setup-node@v3
-      - name: Move on frontend workspace
-        run: cd ./apps/frontend
       - name: Create .env file from GitHub secrets
         run: echo "$ENV_VARIABLES" > .env
       - name: Install dependencies

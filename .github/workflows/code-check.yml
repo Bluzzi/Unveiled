@@ -6,6 +6,10 @@ on:
   pull_request:
     types: ["opened", "synchronize"]
 
+defaults:
+  run:
+    working-directory: ./apps/frontend
+
 jobs:
   lint:
     name: ESLint
@@ -16,8 +20,6 @@ jobs:
         with:
           version: 8.1.1
       - uses: actions/setup-node@v3
-      - name: Move on frontend workspace
-        run: cd ./apps/frontend
       - name: Install dependencies
         run: pnpm install
       - name: Run ESLint
@@ -31,8 +33,6 @@ jobs:
         with:
           version: 8.1.1
       - uses: actions/setup-node@v3
-      - name: Move on frontend workspace
-        run: cd ./apps/frontend
       - name: Install dependencies
         run: pnpm install
       - name: Run typecheck
