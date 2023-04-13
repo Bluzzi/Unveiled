@@ -14,7 +14,7 @@ export function Divider({ text, textPosition = "middle", className, ...props }: 
     );
 
     if (textPosition === "middle") return (
-      <span className={clsx("flex items-center gap-3", className)}>
+      <span className={clsx("flex items-center gap-3 w-full", className)}>
         <Divider />
         <p className="text-gray">{text}</p>
         <Divider />
