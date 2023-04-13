@@ -1,5 +1,6 @@
 {
   "version": "0.1.0",
+  "name": "@unveiled/frontend",
   "scripts": {
     "build": "next build",
     "dev": "next dev",
