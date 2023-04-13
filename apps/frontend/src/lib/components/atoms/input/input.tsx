@@ -21,7 +21,7 @@ export const Input = forwardRef<HTMLInputElement, InputProps>((
 
       // Size:
       "py-1 px-3": size === "small",
-      "py-2 px-4": size === "base"
+      "py-3 px-4": size === "base"
     },
     className
   );
