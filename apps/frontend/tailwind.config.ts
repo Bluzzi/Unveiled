@@ -14,7 +14,9 @@ export default {
       "white": "white",
       "black": "black",
 
-      "primary": "#202C59"
+      "primary": "#202C59",
+
+      "red": "#FF5555"
     },
 
     fontSize: {
