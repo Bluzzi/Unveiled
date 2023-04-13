@@ -11,14 +11,7 @@
     "test:e2e": "playwright test",
     "sb:dev": "storybook dev -p 6006",
     "sb:build": "storybook build",
-    "sb:start": "serve storybook-static",
-    "db:migrate-dev": "prisma migrate dev",
-    "db:migrate-prod": "prisma migrate deploy",
-    "db:reset": "prisma migrate reset",
-    "db:seed": "prisma db seed",
-    "db:client": "prisma generate",
-    "db:studio": "prisma studio",
-    "preinstall": "npx only-allow pnpm"
+    "sb:start": "serve storybook-static"
   },
   "dependencies": {
     "@hookform/resolvers": "^3.0.1",

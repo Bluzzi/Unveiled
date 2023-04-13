@@ -21,6 +21,7 @@
   "homepage": "https://github.com/Virtual-Royaume/Unveiled#readme",
   "scripts": {
     "back": "pnpm --filter backend",
-    "front": "pnpm --filter frontend"
+    "front": "pnpm --filter frontend",
+    "preinstall": "npx only-allow pnpm"
   }
 }

@@ -4,7 +4,13 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "db:migrate-dev": "prisma migrate dev",
+    "db:migrate-prod": "prisma migrate deploy",
+    "db:reset": "prisma migrate reset",
+    "db:seed": "prisma db seed",
+    "db:client": "prisma generate",
+    "db:studio": "prisma studio"
   },
   "repository": {
     "type": "git",
@@ -20,14 +26,17 @@
   },
   "homepage": "https://github.com/Virtual-Royaume/Unveiled#readme",
   "dependencies": {
-    "socket.io": "^4.6.1"
+    "@supabase/supabase-js": "^2.20.0",
+    "socket.io": "^4.6.1",
+    "@unveiled/backend-types": "workspace:^"
   },
   "devDependencies": {
-    "@swc-node/register": "^1.6.4",
-    "nodemon": "^2.0.22",
     "@bluzzi/eslint-config": "^0.9.0",
+    "@swc-node/register": "^1.6.4",
     "@types/node": "18.15.11",
+    "dotenv": "^16.0.3",
     "eslint": "8.37.0",
+    "nodemon": "^2.0.22",
     "typescript": "5.0.3"
   },
   "eslintConfig": {
