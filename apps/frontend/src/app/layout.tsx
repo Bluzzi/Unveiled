@@ -19,7 +19,7 @@ export default function RootLayout({ children }: PropsWithChildren): ReactElemen
     <html>
       <head />
 
-      <body>
+      <body className="bg-tray bg-cover bg-center">
         <Provider>
           {children}
         </Provider>
