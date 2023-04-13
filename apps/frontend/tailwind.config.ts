@@ -46,6 +46,10 @@ export default {
     },
 
     extend: {
+      backgroundImage: {
+        "tray": "url('/background.png')"
+      },
+
       transitionProperty: {
         "max-height": "max-height",
         "max-width": "max-width"
