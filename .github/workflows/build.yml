@@ -24,7 +24,7 @@ jobs:
       - name: Install dependencies
         run: pnpm install
       - name: Build NextJS
-        run: pnpm run build
+        run: pnpm front run build
   storybook:
     name: Storybook
     runs-on: ubuntu-latest
@@ -37,4 +37,4 @@ jobs:
       - name: Install dependencies
         run: pnpm install
       - name: Build Storybook
-        run: pnpm run sb:build
+        run: pnpm front run sb:build

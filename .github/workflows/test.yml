@@ -24,7 +24,7 @@ jobs:
       - name: Install dependencies
         run: pnpm install
       - name: Run Vitest
-        run: pnpm run test:unit
+        run: pnpm front run test:unit
   end-to-end:
     name: End-to-end
     timeout-minutes: 60
@@ -42,7 +42,7 @@ jobs:
       - name: Install Playwright browsers
         run: npx playwright install --with-deps
       - name: Run Playwright
-        run: pnpm run test:e2e
+        run: pnpm front run test:e2e
       - uses: actions/upload-artifact@v3
         if: always()
         with:

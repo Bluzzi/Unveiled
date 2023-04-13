@@ -19,7 +19,7 @@ jobs:
       - name: Install dependencies
         run: pnpm install
       - name: Run ESLint
-        run: pnpm run lint
+        run: pnpm front run lint
   typecheck:
     name: TS Typecheck
     runs-on: ubuntu-latest
@@ -32,4 +32,4 @@ jobs:
       - name: Install dependencies
         run: pnpm install
       - name: Run typecheck
-        run: npx tsc --noEmit
+        run: cd ./apps/frontend && npx tsc --noEmit
